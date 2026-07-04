@@ -157,7 +157,7 @@ function Index() {
               className="group flex flex-col gap-5 rounded-3xl border border-white/60 bg-white/70 p-6 shadow-[0_10px_40px_-15px_rgba(139,92,246,0.25)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(139,92,246,0.35)]"
             >
               <div
-                className="grid h-14 w-14 place-items-center rounded-2xl text-2xl shadow-sm"
+                className="grid h-14 w-14 place-items-center rounded-2xl shadow-sm"
                 style={{ background: s.gradient }}
               >
                 {s.icon}
