@@ -139,6 +139,46 @@ function Index() {
     >
       <section className="mx-auto max-w-6xl">
         <div className="mb-10 flex flex-col gap-3">
+          <span className="text-sm font-medium text-violet-500">Услуги</span>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            Что я делаю
+          </h2>
+          <p className="max-w-xl text-base text-slate-500">
+            Четыре направления, в которых помогаю запускать и развивать
+            продукты.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((s) => (
+            <article
+              key={s.title}
+              className="group flex flex-col gap-5 rounded-3xl border border-white/60 bg-white/70 p-6 shadow-[0_10px_40px_-15px_rgba(139,92,246,0.25)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(139,92,246,0.35)]"
+            >
+              <div
+                className="grid h-14 w-14 place-items-center rounded-2xl text-2xl shadow-sm"
+                style={{ background: s.gradient }}
+              >
+                {s.icon}
+              </div>
+              <div className="flex flex-col gap-3">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {s.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-slate-500">
+                  {s.description}
+                </p>
+              </div>
+              <div className="mt-auto rounded-xl border border-violet-100 bg-violet-50/70 px-4 py-3">
+                <p className="text-xs font-medium text-violet-600">{s.result}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto mt-20 max-w-6xl">
+        <div className="mb-10 flex flex-col gap-3">
           <span className="text-sm font-medium text-violet-500">
             Портфолио
           </span>
