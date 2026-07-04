@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Rocket, Bot, Palette, Plug } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
