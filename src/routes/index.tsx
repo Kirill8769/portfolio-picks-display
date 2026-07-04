@@ -85,6 +85,49 @@ const projects: Project[] = [
   },
 ];
 
+type Service = {
+  icon: string;
+  title: string;
+  description: string;
+  result: string;
+  gradient: string;
+};
+
+const services: Service[] = [
+  {
+    icon: "🚀",
+    title: "MVP за неделю",
+    description:
+      "Превращаю идею в работающий продукт за 7 дней. Быстрые циклы обратной связи и готовность к запуску.",
+    result: "Готовый продукт за неделю",
+    gradient: "linear-gradient(135deg, #fef3c7 0%, #fecdd3 100%)",
+  },
+  {
+    icon: "🤖",
+    title: "AI-автоматизация",
+    description:
+      "Встраиваю искусственный интеллект в процессы: от генерации контента до анализа данных. Экономлю время команды.",
+    result: "До 80% рутины на AI",
+    gradient: "linear-gradient(135deg, #dbeafe 0%, #cffafe 100%)",
+  },
+  {
+    icon: "🎨",
+    title: "UI/UX с вайбкодингом",
+    description:
+      "Создаю интерфейсы, которые выглядят живо и приятно взаимодействуют. Дизайн, который чувствуется.",
+    result: "Интерфейсы с высокой конверсией",
+    gradient: "linear-gradient(135deg, #e0e7ff 0%, #f5d0fe 100%)",
+  },
+  {
+    icon: "🔌",
+    title: "Интеграции",
+    description:
+      "Соединяю сервисы, API и базы данных в единый поток. Всё работает синхронно и надёжно.",
+    result: "Единая экосистема сервисов",
+    gradient: "linear-gradient(135deg, #dcfce7 0%, #fef3c7 100%)",
+  },
+];
+
 function Index() {
   return (
     <main
