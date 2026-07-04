@@ -87,7 +87,7 @@ const projects: Project[] = [
 ];
 
 type Service = {
-  icon: string;
+  icon: React.ReactNode;
   title: string;
   description: string;
   result: string;
@@ -96,7 +96,7 @@ type Service = {
 
 const services: Service[] = [
   {
-    icon: "🚀",
+    icon: <Rocket className="h-6 w-6 text-slate-700" />,
     title: "MVP за неделю",
     description:
       "Превращаю идею в работающий продукт за 7 дней. Быстрые циклы обратной связи и готовность к запуску.",
@@ -104,7 +104,7 @@ const services: Service[] = [
     gradient: "linear-gradient(135deg, #fef3c7 0%, #fecdd3 100%)",
   },
   {
-    icon: "🤖",
+    icon: <Bot className="h-6 w-6 text-slate-700" />,
     title: "AI-автоматизация",
     description:
       "Встраиваю искусственный интеллект в процессы: от генерации контента до анализа данных. Экономлю время команды.",
@@ -112,7 +112,7 @@ const services: Service[] = [
     gradient: "linear-gradient(135deg, #dbeafe 0%, #cffafe 100%)",
   },
   {
-    icon: "🎨",
+    icon: <Palette className="h-6 w-6 text-slate-700" />,
     title: "UI/UX с вайбкодингом",
     description:
       "Создаю интерфейсы, которые выглядят живо и приятно взаимодействуют. Дизайн, который чувствуется.",
@@ -120,7 +120,7 @@ const services: Service[] = [
     gradient: "linear-gradient(135deg, #e0e7ff 0%, #f5d0fe 100%)",
   },
   {
-    icon: "🔌",
+    icon: <Plug className="h-6 w-6 text-slate-700" />,
     title: "Интеграции",
     description:
       "Соединяю сервисы, API и базы данных в единый поток. Всё работает синхронно и надёжно.",
