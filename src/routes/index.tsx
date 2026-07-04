@@ -180,6 +180,69 @@ function Index() {
 
       <section className="mx-auto mt-20 max-w-6xl">
         <div className="mb-10 flex flex-col gap-3">
+          <span className="text-sm font-medium text-violet-500">Процесс</span>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            Как я работаю
+          </h2>
+          <p className="max-w-xl text-base text-slate-500">
+            Прозрачный путь от задачи до запущенного продукта.
+          </p>
+        </div>
+
+        {/* Desktop: horizontal timeline */}
+        <div className="relative hidden lg:block">
+          <div className="absolute left-0 right-0 top-6 h-0.5 bg-violet-100" />
+          <div className="grid grid-cols-4 gap-6">
+            {steps.map((step, i) => (
+              <div
+                key={step.title}
+                className="relative flex flex-col items-center gap-6"
+              >
+                <div className="z-10 grid h-12 w-12 place-items-center rounded-full border border-violet-100 bg-white shadow-[0_4px_20px_-5px_rgba(139,92,246,0.3)]">
+                  <span className="text-lg font-bold text-violet-600">
+                    {i + 1}
+                  </span>
+                </div>
+                <article className="w-full rounded-3xl border border-white/60 bg-white/70 p-6 text-center shadow-[0_10px_40px_-15px_rgba(139,92,246,0.25)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1">
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                    {step.description}
+                  </p>
+                </article>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile: vertical timeline */}
+        <div className="relative lg:hidden">
+          <div className="absolute bottom-0 left-6 top-0 w-0.5 bg-violet-100" />
+          <div className="flex flex-col gap-6">
+            {steps.map((step, i) => (
+              <div key={step.title} className="relative flex items-start gap-5">
+                <div className="z-10 grid h-12 w-12 shrink-0 place-items-center rounded-full border border-violet-100 bg-white shadow-[0_4px_20px_-5px_rgba(139,92,246,0.3)]">
+                  <span className="text-lg font-bold text-violet-600">
+                    {i + 1}
+                  </span>
+                </div>
+                <article className="flex-1 rounded-3xl border border-white/60 bg-white/70 p-5 shadow-[0_10px_40px_-15px_rgba(139,92,246,0.25)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1">
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                    {step.description}
+                  </p>
+                </article>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-20 max-w-6xl">
+        <div className="mb-10 flex flex-col gap-3">
           <span className="text-sm font-medium text-violet-500">
             Портфолио
           </span>
