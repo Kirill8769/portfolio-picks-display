@@ -1,5 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Rocket, Bot, Palette, Plug } from "lucide-react";
+import {
+  ArrowRight,
+  Bot,
+  Palette,
+  Plug,
+  Rocket,
+  Sparkles,
+  TrendingUp,
+} from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -157,6 +165,108 @@ const steps: Step[] = [
   },
 ];
 
+function HeroDashboard() {
+  return (
+    <div className="relative w-full max-w-md shrink-0 rounded-3xl border border-hero-foreground/10 bg-hero-card/80 p-5 shadow-2xl backdrop-blur-xl glow-purple">
+      <div className="mb-4 flex items-center justify-between">
+        <div>
+          <p className="text-xs text-hero-muted">Good morning</p>
+          <h3 className="text-base font-semibold text-hero-foreground">
+            AI Dashboard
+          </h3>
+        </div>
+        <div className="grid h-8 w-8 place-items-center rounded-full bg-neon-orange/15">
+          <TrendingUp className="h-4 w-4 text-neon-orange" />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 gap-3">
+        <div className="rounded-2xl border border-hero-foreground/5 bg-hero-bg p-3">
+          <p className="text-[10px] uppercase tracking-wider text-hero-muted">
+            Revenue
+          </p>
+          <p className="mt-1 text-sm font-bold text-hero-foreground">$148K</p>
+          <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-hero-foreground/10">
+            <div className="h-full w-[72%] rounded-full bg-neon-orange" />
+          </div>
+        </div>
+        <div className="rounded-2xl border border-hero-foreground/5 bg-hero-bg p-3">
+          <p className="text-[10px] uppercase tracking-wider text-hero-muted">
+            Users
+          </p>
+          <p className="mt-1 text-sm font-bold text-hero-foreground">3.2K</p>
+          <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-hero-foreground/10">
+            <div className="h-full w-[58%] rounded-full bg-neon-purple" />
+          </div>
+        </div>
+        <div className="rounded-2xl border border-hero-foreground/5 bg-hero-bg p-3">
+          <p className="text-[10px] uppercase tracking-wider text-hero-muted">
+            Deals
+          </p>
+          <p className="mt-1 text-sm font-bold text-hero-foreground">18</p>
+          <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-hero-foreground/10">
+            <div className="h-full w-[84%] rounded-full bg-gradient-to-r from-neon-orange to-neon-purple" />
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-4 grid grid-cols-2 gap-3">
+        <div className="rounded-2xl border border-hero-foreground/5 bg-hero-bg p-3">
+          <div className="mb-2 flex items-center justify-between">
+            <p className="text-[10px] text-hero-muted">Revenue</p>
+            <span className="rounded-full bg-neon-purple/10 px-1.5 py-0.5 text-[9px] font-medium text-neon-purple">
+              +12%
+            </span>
+          </div>
+          <div className="flex h-24 items-end gap-1">
+            {[35, 55, 40, 80, 60, 45, 70].map((h, i) => (
+              <div
+                key={i}
+                className="flex-1 rounded-t-md bg-neon-purple"
+                style={{ height: `${h}%`, opacity: i === 3 ? 1 : 0.35 }}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center rounded-2xl border border-hero-foreground/5 bg-hero-bg p-3">
+          <div className="relative h-24 w-24">
+            <svg viewBox="0 0 36 36" className="h-full w-full -rotate-90">
+              <path
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                fill="none"
+                stroke="var(--hero-foreground)"
+                strokeOpacity="0.1"
+                strokeWidth="3"
+              />
+              <path
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                fill="none"
+                stroke="var(--neon-purple)"
+                strokeWidth="3"
+                strokeDasharray="70, 100"
+              />
+              <path
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                fill="none"
+                stroke="var(--neon-orange)"
+                strokeWidth="3"
+                strokeDasharray="30, 100"
+                strokeDashoffset="-70"
+              />
+            </svg>
+            <div className="absolute inset-0 grid place-items-center">
+              <span className="text-xs font-bold text-hero-foreground">
+                7.36%
+              </span>
+            </div>
+          </div>
+          <p className="mt-2 text-[10px] text-hero-muted">Conversion Rate</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Index() {
   return (
     <main
@@ -166,6 +276,52 @@ function Index() {
           "linear-gradient(180deg, #fafaff 0%, #f5f3ff 50%, #fdf4ff 100%)",
       }}
     >
+      <section
+        id="hero"
+        className="relative mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] bg-hero-bg px-6 py-16 sm:px-10 lg:px-16 lg:py-24"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 50% at 100% 0%, var(--hero-card), var(--hero-bg))",
+        }}
+      >
+        <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-neon-purple/20 blur-[120px]" />
+        <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-neon-orange/20 blur-[120px]" />
+
+        <div className="relative flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex max-w-2xl flex-col gap-6">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-neon-purple/30 bg-neon-purple/10 px-4 py-1.5 text-xs font-medium text-neon-purple">
+              <Sparkles className="h-3.5 w-3.5" />
+              Специалист по вайбкодингу
+            </span>
+            <h1 className="text-4xl font-bold tracking-tight text-hero-foreground sm:text-5xl lg:text-6xl">
+              Создаю <span className="text-neon-purple">AI-продукты</span> через{" "}
+              <span className="text-gradient-hero">вайбкодинг</span>
+            </h1>
+            <p className="text-lg text-hero-muted sm:text-xl">
+              Быстро собираю MVP, лендинги и веб-приложения с помощью
+              современных AI-инструментов.
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="#portfolio"
+                className="inline-flex items-center gap-2 rounded-full bg-neon-orange px-6 py-3 text-sm font-semibold text-hero-foreground shadow-lg transition-transform hover:scale-105 hover:glow-orange focus:outline-none focus:ring-2 focus:ring-neon-orange/50"
+              >
+                Посмотреть проекты
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href="mailto:hello@vibecoder.dev"
+                className="inline-flex items-center gap-2 rounded-full border border-neon-purple/40 bg-neon-purple/10 px-6 py-3 text-sm font-semibold text-neon-purple transition-colors hover:bg-neon-purple/20 focus:outline-none focus:ring-2 focus:ring-neon-purple/50"
+              >
+                Связаться
+              </a>
+            </div>
+          </div>
+
+          <HeroDashboard />
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl">
         <div className="mb-10 flex flex-col gap-3">
           <span className="text-sm font-medium text-violet-500">Услуги</span>
@@ -269,7 +425,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto mt-20 max-w-6xl">
+      <section id="portfolio" className="mx-auto mt-20 max-w-6xl">
         <div className="mb-10 flex flex-col gap-3">
           <span className="text-sm font-medium text-violet-500">
             Портфолио
