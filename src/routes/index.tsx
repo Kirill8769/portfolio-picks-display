@@ -167,41 +167,41 @@ const steps: Step[] = [
 
 function HeroDashboard() {
   return (
-    <div className="relative w-full max-w-md shrink-0 rounded-3xl border border-hero-foreground/10 bg-hero-card/80 p-5 shadow-2xl backdrop-blur-xl glow-purple">
+    <div className="relative w-full max-w-md shrink-0 rounded-3xl border border-hero-foreground/5 bg-hero-card p-5 shadow-[0_25px_60px_-20px_rgba(139,92,246,0.35)] backdrop-blur-xl">
       <div className="mb-4 flex items-center justify-between">
         <div>
-          <p className="text-xs text-hero-muted">Good morning</p>
+          <p className="text-xs text-hero-muted">Доброе утро</p>
           <h3 className="text-base font-semibold text-hero-foreground">
-            AI Dashboard
+            AI-Дашборд
           </h3>
         </div>
-        <div className="grid h-8 w-8 place-items-center rounded-full bg-neon-orange/15">
-          <TrendingUp className="h-4 w-4 text-neon-orange" />
+        <div className="grid h-8 w-8 place-items-center rounded-full bg-neon-orange/25">
+          <TrendingUp className="h-4 w-4 text-hero-foreground" />
         </div>
       </div>
 
       <div className="grid grid-cols-3 gap-3">
         <div className="rounded-2xl border border-hero-foreground/5 bg-hero-bg p-3">
           <p className="text-[10px] uppercase tracking-wider text-hero-muted">
-            Revenue
+            Доход
           </p>
-          <p className="mt-1 text-sm font-bold text-hero-foreground">$148K</p>
+          <p className="mt-1 text-sm font-bold text-hero-foreground">148К ₽</p>
           <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-hero-foreground/10">
             <div className="h-full w-[72%] rounded-full bg-neon-orange" />
           </div>
         </div>
         <div className="rounded-2xl border border-hero-foreground/5 bg-hero-bg p-3">
           <p className="text-[10px] uppercase tracking-wider text-hero-muted">
-            Users
+            Юзеры
           </p>
-          <p className="mt-1 text-sm font-bold text-hero-foreground">3.2K</p>
+          <p className="mt-1 text-sm font-bold text-hero-foreground">3,2К</p>
           <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-hero-foreground/10">
             <div className="h-full w-[58%] rounded-full bg-neon-purple" />
           </div>
         </div>
         <div className="rounded-2xl border border-hero-foreground/5 bg-hero-bg p-3">
           <p className="text-[10px] uppercase tracking-wider text-hero-muted">
-            Deals
+            Сделки
           </p>
           <p className="mt-1 text-sm font-bold text-hero-foreground">18</p>
           <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-hero-foreground/10">
@@ -213,7 +213,7 @@ function HeroDashboard() {
       <div className="mt-4 grid grid-cols-2 gap-3">
         <div className="rounded-2xl border border-hero-foreground/5 bg-hero-bg p-3">
           <div className="mb-2 flex items-center justify-between">
-            <p className="text-[10px] text-hero-muted">Revenue</p>
+            <p className="text-[10px] text-hero-muted">Выручка</p>
             <span className="rounded-full bg-neon-purple/10 px-1.5 py-0.5 text-[9px] font-medium text-neon-purple">
               +12%
             </span>
@@ -260,7 +260,7 @@ function HeroDashboard() {
               </span>
             </div>
           </div>
-          <p className="mt-2 text-[10px] text-hero-muted">Conversion Rate</p>
+          <p className="mt-2 text-[10px] text-hero-muted">Конверсия</p>
         </div>
       </div>
     </div>
@@ -281,20 +281,21 @@ function Index() {
         className="relative mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] bg-hero-bg px-6 py-16 sm:px-10 lg:px-16 lg:py-24"
         style={{
           background:
-            "radial-gradient(ellipse 80% 50% at 100% 0%, var(--hero-card), var(--hero-bg))",
+            "linear-gradient(135deg, oklch(0.97 0.03 320) 0%, oklch(0.98 0.02 260) 50%, oklch(0.97 0.03 190) 100%)",
         }}
       >
-        <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-neon-purple/20 blur-[120px]" />
-        <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-neon-orange/20 blur-[120px]" />
+        <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-neon-purple/40 blur-[120px]" />
+        <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-neon-orange/30 blur-[120px]" />
+        <div className="absolute right-1/3 bottom-0 h-72 w-72 rounded-full bg-pastel-blue/30 blur-[120px]" style={{ background: "color-mix(in oklab, var(--pastel-blue) 40%, transparent)" }} />
 
         <div className="relative flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex max-w-2xl flex-col gap-6">
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-neon-purple/30 bg-neon-purple/10 px-4 py-1.5 text-xs font-medium text-neon-purple">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-hero-foreground/10 bg-hero-card/70 px-4 py-1.5 text-xs font-medium text-hero-foreground backdrop-blur">
               <Sparkles className="h-3.5 w-3.5" />
               Специалист по вайбкодингу
             </span>
             <h1 className="text-4xl font-bold tracking-tight text-hero-foreground sm:text-5xl lg:text-6xl">
-              Создаю <span className="text-neon-purple">AI-продукты</span> через{" "}
+              Создаю <span className="text-gradient-hero">AI-продукты</span> через{" "}
               <span className="text-gradient-hero">вайбкодинг</span>
             </h1>
             <p className="text-lg text-hero-muted sm:text-xl">
@@ -304,14 +305,14 @@ function Index() {
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="#portfolio"
-                className="inline-flex items-center gap-2 rounded-full bg-neon-orange px-6 py-3 text-sm font-semibold text-hero-foreground shadow-lg transition-transform hover:scale-105 hover:glow-orange focus:outline-none focus:ring-2 focus:ring-neon-orange/50"
+                className="inline-flex items-center gap-2 rounded-full bg-neon-orange px-6 py-3 text-sm font-semibold text-hero-foreground shadow-lg glow-orange transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-neon-orange/50"
               >
                 Посмотреть проекты
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="mailto:hello@vibecoder.dev"
-                className="inline-flex items-center gap-2 rounded-full border border-neon-purple/40 bg-neon-purple/10 px-6 py-3 text-sm font-semibold text-neon-purple transition-colors hover:bg-neon-purple/20 focus:outline-none focus:ring-2 focus:ring-neon-purple/50"
+                className="inline-flex items-center gap-2 rounded-full bg-neon-purple px-6 py-3 text-sm font-semibold text-hero-foreground shadow-lg glow-purple transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-neon-purple/50"
               >
                 Связаться
               </a>
