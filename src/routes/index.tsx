@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
   Bot,
+  Mail,
+  MessageCircle,
   Palette,
   Plug,
   Rocket,
@@ -473,6 +475,41 @@ function Index() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="contact" className="mx-auto mt-20 max-w-6xl">
+        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/60 bg-white/70 px-6 py-14 shadow-[0_10px_40px_-15px_rgba(139,92,246,0.25)] backdrop-blur-xl sm:px-10 sm:py-16 lg:px-16">
+          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-violet-200/40 blur-[100px]" />
+          <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-orange-200/40 blur-[100px]" />
+
+          <div className="relative flex flex-col items-center gap-6 text-center">
+            <span className="text-sm font-medium text-violet-500">Контакты</span>
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Готовы начать проект?
+            </h2>
+            <p className="max-w-xl text-base text-slate-500">
+              Напишите мне, и мы обсудим вашу задачу.
+            </p>
+            <div className="mt-2 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+              <a
+                href="https://t.me/vibecoder"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(139,92,246,0.6)] transition-transform hover:-translate-y-0.5"
+              >
+                <MessageCircle className="h-4 w-4" />
+                Написать в Telegram
+              </a>
+              <a
+                href="mailto:hello@vibecoder.dev"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-violet-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition-transform hover:-translate-y-0.5"
+              >
+                <Mail className="h-4 w-4" />
+                Написать на Email
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
