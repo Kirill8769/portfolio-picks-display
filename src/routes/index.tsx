@@ -479,16 +479,26 @@ function Index() {
       </section>
 
       <section id="contact" className="mx-auto mt-20 max-w-6xl">
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/60 bg-white/70 px-6 py-14 shadow-[0_10px_40px_-15px_rgba(139,92,246,0.25)] backdrop-blur-xl sm:px-10 sm:py-16 lg:px-16">
-          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-violet-200/40 blur-[100px]" />
-          <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-orange-200/40 blur-[100px]" />
+        <div
+          className="relative overflow-hidden rounded-[2.5rem] border border-white/70 px-6 py-14 shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)] backdrop-blur-xl sm:px-10 sm:py-16 lg:px-16"
+          style={{
+            background:
+              "linear-gradient(135deg, oklch(0.97 0.03 320) 0%, oklch(0.98 0.02 260) 50%, oklch(0.97 0.03 190) 100%)",
+          }}
+        >
+          <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-violet-300/40 blur-[110px]" />
+          <div className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-orange-200/50 blur-[110px]" />
+          <div className="pointer-events-none absolute right-1/3 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-sky-200/40 blur-[110px]" />
 
           <div className="relative flex flex-col items-center gap-6 text-center">
-            <span className="text-sm font-medium text-violet-500">Контакты</span>
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/70 bg-white/70 px-4 py-1.5 text-xs font-medium text-violet-600 backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5" />
+              Контакты
+            </span>
             <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
               Готовы начать проект?
             </h2>
-            <p className="max-w-xl text-base text-slate-500">
+            <p className="max-w-xl text-base text-slate-600">
               Напишите мне, и мы обсудим вашу задачу.
             </p>
             <div className="mt-2 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
@@ -496,14 +506,14 @@ function Index() {
                 href="https://t.me/vibecoder"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-violet-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(139,92,246,0.6)] transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_-10px_rgba(139,92,246,0.55)] transition-transform hover:-translate-y-0.5"
               >
                 <MessageCircle className="h-4 w-4" />
                 Написать в Telegram
               </a>
               <a
                 href="mailto:hello@vibecoder.dev"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-violet-200 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/80 px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm backdrop-blur transition-transform hover:-translate-y-0.5 hover:bg-white"
               >
                 <Mail className="h-4 w-4" />
                 Написать на Email
