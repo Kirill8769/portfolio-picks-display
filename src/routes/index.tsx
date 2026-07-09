@@ -194,7 +194,7 @@ function HeroDashboard() {
         </div>
         <div className="rounded-2xl border border-hero-foreground/5 bg-hero-bg p-3">
           <p className="text-[10px] uppercase tracking-wider text-hero-muted">
-            Юзеры
+            Пользователи
           </p>
           <p className="mt-1 text-sm font-bold text-hero-foreground">3,2К</p>
           <div className="mt-2 h-1 w-full overflow-hidden rounded-full bg-hero-foreground/10">
@@ -327,7 +327,6 @@ function Index() {
 
       <section className="mx-auto mt-20 max-w-6xl">
         <div className="mb-10 flex flex-col gap-3">
-          <span className="text-sm font-medium text-violet-500">Услуги</span>
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
             Что я делаю
           </h2>
@@ -367,7 +366,6 @@ function Index() {
 
       <section className="mx-auto mt-20 max-w-6xl">
         <div className="mb-10 flex flex-col gap-3">
-          <span className="text-sm font-medium text-violet-500">Процесс</span>
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
             Как я работаю
           </h2>
@@ -430,9 +428,6 @@ function Index() {
 
       <section id="portfolio" className="mx-auto mt-20 max-w-6xl">
         <div className="mb-10 flex flex-col gap-3">
-          <span className="text-sm font-medium text-violet-500">
-            Портфолио
-          </span>
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
             Избранные проекты
           </h2>
