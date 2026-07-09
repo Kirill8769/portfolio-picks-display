@@ -313,7 +313,7 @@ function Index() {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="mailto:hello@vibecoder.dev"
+                href="#contact"
                 className="inline-flex items-center gap-2 rounded-full bg-neon-purple px-6 py-3 text-sm font-semibold text-hero-foreground shadow-lg glow-purple transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-neon-purple/50"
               >
                 Связаться
