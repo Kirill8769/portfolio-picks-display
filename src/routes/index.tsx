@@ -325,7 +325,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl">
+      <section className="mx-auto mt-20 max-w-6xl">
         <div className="mb-10 flex flex-col gap-3">
           <span className="text-sm font-medium text-violet-500">Услуги</span>
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
