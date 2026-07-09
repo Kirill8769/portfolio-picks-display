@@ -379,18 +379,18 @@ function Index() {
         {/* Desktop: horizontal timeline */}
         <div className="relative hidden lg:block">
           <div className="absolute left-0 right-0 top-6 h-0.5 bg-violet-100" />
-          <div className="grid grid-cols-4 items-start gap-6">
+          <div className="grid grid-cols-4 items-stretch gap-6">
             {steps.map((step, i) => (
               <div
                 key={step.title}
-                className="relative flex flex-col items-center gap-6"
+                className="relative flex h-full flex-col items-center gap-6"
               >
                 <div className="z-10 grid h-12 w-12 place-items-center rounded-full border border-violet-100 bg-white shadow-[0_4px_20px_-5px_rgba(139,92,246,0.3)]">
                   <span className="text-lg font-bold text-violet-600">
                     {i + 1}
                   </span>
                 </div>
-                <article className="w-full self-start rounded-3xl border border-white/60 bg-white/70 p-6 text-center shadow-[0_10px_40px_-15px_rgba(139,92,246,0.25)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1">
+                <article className="flex h-full w-full flex-1 flex-col rounded-3xl border border-white/60 bg-white/70 p-6 text-center shadow-[0_10px_40px_-15px_rgba(139,92,246,0.25)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1">
                   <h3 className="text-lg font-semibold text-slate-900">
                     {step.title}
                   </h3>
