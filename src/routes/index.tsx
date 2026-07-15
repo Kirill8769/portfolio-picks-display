@@ -13,6 +13,36 @@ import {
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "VibeCoder — AI-продукты через вайбкодинг" },
+      {
+        name: "description",
+        content:
+          "Создаю MVP, лендинги и веб-приложения с помощью AI-инструментов. Быстрый запуск, автоматизация и продуманный дизайн.",
+      },
+      {
+        property: "og:title",
+        content: "VibeCoder — AI-продукты через вайбкодинг",
+      },
+      {
+        property: "og:description",
+        content:
+          "Создаю MVP, лендинги и веб-приложения с помощью AI-инструментов. Быстрый запуск, автоматизация и продуманный дизайн.",
+      },
+      { property: "og:type", content: "website" },
+      {
+        property: "og:url",
+        content: "https://portfolio-picks-display.lovable.app/",
+      },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://portfolio-picks-display.lovable.app/",
+      },
+    ],
+  }),
 });
 
 type Project = {
